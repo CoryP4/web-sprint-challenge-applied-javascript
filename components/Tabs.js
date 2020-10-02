@@ -14,7 +14,6 @@ import axios from 'axios'
 
 axios.get('https://lambda-times-api.herokuapp.com/topics')
     .then(ele => {
-        console.log(ele.data)
         const topics = document.querySelector('.topics')
 
         ele.data.topics.forEach(dat => {
