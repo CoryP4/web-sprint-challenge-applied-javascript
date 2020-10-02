@@ -83,9 +83,9 @@ function articleMaker (dat) {
     const articleCards = document.querySelector('.cards-container')
     articleCards.appendChild(cardDiv)
 
-    // cardDiv.addEventListener('click', () => {
-    //     consol.log(//headline of the article)
-    // })
+    cardDiv.addEventListener('click', () => {
+        console.log(dat.headline)
+    })
 
     
     return cardDiv
