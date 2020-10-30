@@ -26,25 +26,32 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then(res => {
         console.log(res.data.articles)
         res.data.articles.bootstrap.forEach(ele => {
+            ele.id2 = 'bootstrap'
             articleMaker(ele)
             
         })
         res.data.articles.javascript.forEach(ele => {
+            ele.id2 = 'javascript'
             articleMaker(ele)
             
         })
         res.data.articles.jquery.forEach(ele => {
+            ele.id2 = 'jquery'
             articleMaker(ele)
             
         })
         res.data.articles.node.forEach(ele => {
+            ele.id2 = 'node'
             articleMaker(ele)
             
         })
         res.data.articles.technology.forEach(ele => {
+            ele.id2 = 'technology'
             articleMaker(ele)
             
         })
+
+
     })
     .catch(err => {
         console.log(err)
@@ -82,6 +89,13 @@ function articleMaker (dat) {
 
     const articleCards = document.querySelector('.cards-container')
     articleCards.appendChild(cardDiv)
+    console.log(dat.id2)
+    if(dat.id2 === 'bootstrap') {
+        cardDiv.classList.add('bootstrap')
+    } else {
+        console.log('failed')
+    }
+
 
     cardDiv.addEventListener('click', () => {
         console.log(dat.headline)

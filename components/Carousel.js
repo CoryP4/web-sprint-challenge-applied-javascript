@@ -12,6 +12,10 @@
     6. Have fun!
 */
 
+function carousel(e) {
+  console.log(e)
+}
+
 /* HTML:
   <div class="carousel">
     <div class="left-button"> < </div>
